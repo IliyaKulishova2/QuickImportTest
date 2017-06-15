@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by Webxloo Company on 6/1/2017.
+ * Created by Iliya on 6/1/2017.
  */
 public class EventLogModule {
 
@@ -15,12 +15,15 @@ public class EventLogModule {
         PageFactory.initElements(webDriver, this);
     }
 
+    //Find inscription Import Simple
     @FindBy(how = How.XPATH, using = ".//*[@id='event-log']/tbody/tr[2]/td[3]")
     private WebElement inscriptionImportSimple;
 
+    //Find inscription Success
     @FindBy(how = How.XPATH, using = ".//*[@id='event-log']/tbody/tr[2]/td[5]")
     private WebElement inscriptionSuccess;
 
+    //Find inscription Simple Import Complete
     @FindBy(how = How.XPATH, using = ".//*[@id='event-log']/tbody/tr[2]/td[6]")
     private WebElement inscriptionSimpleImportComplete;
 

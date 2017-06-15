@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import properties.PropertyLoader;
 
 
 /**
@@ -29,9 +30,9 @@ public class LoginToDms  {
 
     public void loginToDmsHome() {
         loginField.clear();
-        loginField.sendKeys("autotest2");
+        loginField.sendKeys(PropertyLoader.loadProperty("manager.login"));
         passwordField.clear();
-        passwordField.sendKeys("123");
+        passwordField.sendKeys(PropertyLoader.loadProperty("manager.pw"));
         signInButton.click();
 
     }
